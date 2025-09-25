@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Questrial&display=swap');
 
 body {
-    font-family: "National Park", sans-serif;
-    color: crimson;
     padding: 3rem;
+}
+
+p {
+    font-family: "Nunito Sans", sans-serif;
+    text-align: start;
+    color: black;
+    font-size: 1rem;
+
 }
 
 h1 {
@@ -11,8 +17,59 @@ h1 {
     font-size: 4rem;
 }
 
-.my-response {
+blockquote {
+    font-family: "Nunito Sans", sans-serif;
+    font-style: italic;
     color: gray;
 }
 
-*:not(:first-child) { margin-block-start: 1em; }
+.michael-section {
+    font-family: "Nunito Sans", sans-serif;
+    color: black;
+    font-size: 4rem;
+}
+
+.michael-rock {
+    font-family: "Climate Crisis", sans-serif;
+    font-size: 1rem;
+}
+
+.hooked {
+    font-family: "Climate Crisis", sans-serif;
+    text-align: start;
+}
+
+.on-a {
+    font-family: "Climate Crisis", sans-serif;
+    text-align: center;
+}
+
+.feeling {
+    font-family: "Climate Crisis", sans-serif;
+    text-align: end;
+}
+
+.sooim-section {
+    font-family: "Questria", sans-serif;
+    color: darkslateblue;
+    font-size: 4rem;
+}
+
+.fooled {
+    font-family: "Climate Crisis", sans-serif;
+    text-align: start;
+}
+
+.on-a-ii {
+    font-family: "Climate Crisis", sans-serif;
+    text-align: center;
+}
+
+.feeling-ii {
+    font-family: "Climate Crisis", sans-serif;
+    text-align: end;
+}
+
+*:not(:first-child) { 
+    margin-block-start: 1em;
+}
