@@ -1,73 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rammetto+One&display=swap');
 
 body {
     padding: 3rem;
 }
 
-p {
-    font-family: "Nunito Sans", sans-serif;
-    text-align: start;
+section {
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    text-align: left;
     color: black;
     font-size: 1rem;
 
+}
+
+#hero {
+    font-family: "Inter", sans-serif;
+    line-height: 2;
 }
 
 h1 {
     color: black;
     font-size: 4rem;
+    line-height: 1;
 }
 
-blockquote {
+nav {
+    
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.michael-block {
     font-family: "Nunito Sans", sans-serif;
     font-style: italic;
-    color: gray;
+    color: darkgray;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2;
 }
 
-.michael-section {
+#michael-section {
     font-family: "Nunito Sans", sans-serif;
     color: black;
-    font-size: 4rem;
 }
 
-.michael-rock {
+#michael-rock {
     font-family: "Climate Crisis", sans-serif;
     font-size: 1rem;
 }
 
-.hooked {
+#hooked {
     font-family: "Climate Crisis", sans-serif;
-    text-align: start;
+    text-align: left;
+    color: crimson;
 }
 
-.on-a {
+#on-a {
     font-family: "Climate Crisis", sans-serif;
     text-align: center;
+    color: crimson;
 }
 
-.feeling {
+#feeling {
     font-family: "Climate Crisis", sans-serif;
-    text-align: end;
+    text-align: right;
+    color: crimson;
 }
 
-.sooim-section {
-    font-family: "Questria", sans-serif;
+#michael-tldr {
+    font-family: "Climate Crisis", sans-serif;
+    text-align: center;
+    max-inline-size: 50ch; 
+    color: crimson;
+    letter-spacing: .1rem;
+    margin: 0 auto;
+}
+
+#sooim-section {
+    font-family: "Rammetto One", sans-serif;
     color: darkslateblue;
-    font-size: 4rem;
 }
 
-.fooled {
-    font-family: "Climate Crisis", sans-serif;
-    text-align: start;
+#sooim-section {
+    
 }
 
-.on-a-ii {
-    font-family: "Climate Crisis", sans-serif;
+#fooled {
+    font-family: "Rammetto One", sans-serif;
+    text-align: left;
+}
+
+#on-a-ii {
+    font-family: "Rammetto One", sans-serif;
     text-align: center;
 }
 
-.feeling-ii {
-    font-family: "Climate Crisis", sans-serif;
-    text-align: end;
+#feeling-ii {
+    font-family: "Rammetto One", sans-serif;
+    text-align: right;
+}
+
+#sooim-tldr {
+    text-align: center;
+    max-inline-size: 50ch; 
+    color: darkslateblue;
+    font-family: "Rammetto One", sans-serif;
+    letter-spacing: .1rem;
+    margin: 0 auto;
+    /* I looked up how to center block-level element on mdn  */
 }
 
 *:not(:first-child) { 
