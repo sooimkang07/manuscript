@@ -1,21 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
 
+:root {
+	font-size: 110%;
+}
+
 body {
-	padding: 3rem;
-	max-inline-size: 100ch;
+	max-inline-size: 90ch;
+	margin-inline: auto;
+	hyphens: none;
+	/* I learned this on MDN. */
+}
+
+header,
+section {
+	padding-block-end: 2rem;
 }
 
 #hero {
-	border-bottom: .1em solid silver;
-	padding-bottom: 2em; /* I learned on MDN this adds padding to just the bottom inside the element, which in this case is the hero header. */
+	border-block-end-color: rgb(209, 209, 214);
+	border-block-end-style:	solid;
+	border-block-end-width: .1rem;
+	padding-block-start: 5rem;
 }
 
 h1 {
 	font-family: "Libre Baskerville", serif;
 	color: black;
 	font-size: 3rem;
-	line-height: 1.2;
-	letter-spacing: -.05rem;
+	line-height: 1.3em;
+	letter-spacing: -.03em;
 }
 
 .no-break {
@@ -24,12 +37,13 @@ h1 {
 
 p {
 	font-family: "Libre Baskerville", serif;
-	letter-spacing: .01rem;
-	font-size: 1.1rem;
+	letter-spacing: .03em;
+	font-size: 1rem;
 	font-style: normal;
 	font-weight: normal;
 	text-align: left;
-	line-height: 1.8;
+	line-height: 1.8em;
+	margin-block-start: 1em;
 }
 
 a[href^='https://']::after { 
@@ -55,7 +69,7 @@ a[href^='https://']:active {
 
 /* I learned about these a: from the class Week 4 CSS page. */
 
-.italic {
+em {
 	font-style: italic;
 }
 
@@ -69,49 +83,72 @@ a[href^='https://']:active {
 	color: white;
 }
 
+nav {
+	margin-block-start: 10rem;
+	margin-block-end: 1rem;
+}
+
 ul {
 	font-family: "Inter", sans-serif;
+	font-size: .8rem;
+
 }
 
 li {
-	border: .1em solid silver; /* I learned this is shorthand for border-width, border-style, and border-color on MDN. But is this still best practice when I want all four borders to be the same? */
-	padding: 1em; /* I learned on MDN this adds equal padding to all 4 sides inside the list item border, if not otherwise specified. */
-}
-/* When do I use rem vs. em? */
-
-li:hover {
-	background-color: silver; 
+	display: inline-block;
+	margin-inline-end: .5em;
 }
 
-li:active {
-	background-color: gray; 
+li a {
+	padding: .8rem;
+	text-decoration: none;
+	border-color: rgb(209, 209, 214);
+	border-width: .1em;
+	border-style: solid;
+	border-radius: .8rem;
+}
+
+li a:hover {
+	background-color: rgb(209, 209, 214); 
+}
+
+li a:active {
+	background-color: rgb(142, 142, 147); 
+	border-color: rgb(142, 142, 147);
 }
 
 article {
 	padding-top: 2em;
 	padding-bottom: 2em;
-	border-bottom: .1em solid silver;
+	border-block-end-color: rgb(209, 209, 214);
+	border-block-end-style: solid;
+	border-block-end-width: .1rem;
 }
 
 .article-header {
 	text-transform: uppercase;
 	font-family: "Rethink Sans", sans-serif;
 	font-weight: 800;
-	border-bottom: .1em solid silver;
-	padding-bottom: 2em;
+	border-block-end-color: rgb(209, 209, 214);
+	border-block-end-style: solid;
+	border-block-end-width: .1rem;
+	margin-block: 2em;
+	padding-block: 2em;
 }
 
-h3 {
-	color: black;
-	font-size: 2rem;
-	letter-spacing: .05rem;
-}
-
-#title-michael {
-	background-color: crimson; 
+.article-header h2 {
 	color: white;
 	font-size: 5rem;
-	letter-spacing: .2rem;
+	letter-spacing: .05em;
+	line-height: 2em;
+}
+
+.article-header p {
+	color: black;
+	font-size: 2rem;
+	letter-spacing: .05em;
+	font-family: "Rethink Sans", sans-serif;
+	font-weight: 800;
 }
 
 .author {
@@ -119,15 +156,26 @@ h3 {
 }
 
 #hooked {
+	display: inline-block;
 	text-align: left;
+	background-color: crimson; 
+	padding-inline: 2rem;
 }
 
 #on-a {
+	display: block;
 	text-align: center;
+	background-color: crimson; 
+	padding-inline: 1rem;
+	padding-block: .5rem;
 }
 
 #feeling {
+	display: inline-block;
 	text-align: right;
+	background-color: crimson;
+	padding-inline: 1rem;
+	padding-block: .5rem;
 }
 
 .publication-date {
@@ -143,7 +191,7 @@ h3 {
 }
 
 #tldr-title-michael {
-	letter-spacing: .1rem;
+	letter-spacing: .1em;
 	font-size: 3rem;
 	color: white;
 	font-weight: 800;
@@ -152,30 +200,35 @@ h3 {
 #tldr-p-michael {
 	font-size: 2rem;
 	font-weight: 100;
-	letter-spacing: -.03rem;
-}
-
-#title-sooim {
-	background-color: maroon;
-	color: white;
-	font-size: 5rem;
-	letter-spacing: .2rem;
+	letter-spacing: -.03em;
 }
 
 #fixed {
+	display: block;
 	text-align: left;
+	background-color: rgb(220, 170, 20); 
+	padding-inline: 1rem;
+	padding-block: .5rem;
 }
 
 #on-a-ii {
+	display: block;
 	text-align: center;
+	background-color: rgb(220, 170, 20); 
+	padding-inline: 1rem;
+	padding-block: .5rem;
 }
 
 #fact {
+	display: block;
 	text-align: right;
+	background-color: rgb(220, 170, 20); 
+	padding-inline: 1rem;
+	padding-block: .5rem;
 }
 
 #tldr-sooim {
-	background-color: maroon;
+	background-color: rgb(220, 170, 20);
 	color: white;
 	font-family: "Rethink Sans", sans-serif;
 	text-align: left;
@@ -183,7 +236,7 @@ h3 {
 }
 
 #tldr-title-sooim {
-	letter-spacing: .1rem;
+	letter-spacing: .1em;
 	font-size: 3rem;
 	color: white;
 	font-weight: 800;
@@ -192,9 +245,5 @@ h3 {
 #tldr-p-sooim {
 	font-size: 2rem;
 	font-weight: 100;
-	letter-spacing: -.03rem;
-}
-
-*:not(:first-child) { 
-	margin-block-start: 1em;
+	letter-spacing: -.03em;
 }
