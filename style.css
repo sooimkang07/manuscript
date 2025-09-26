@@ -1,121 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
 
 body {
-    padding: 3rem;
-}
-
-section {
-    font-family: "Inter", sans-serif;
-    line-height: 1.5;
-    text-align: left;
-    color: black;
-    font-size: 1rem;
-
+	padding: 3rem;
+	max-inline-size: 100ch;
 }
 
 #hero {
-    font-family: "Inter", sans-serif;
-    line-height: 2;
+	border-bottom: .1em solid silver;
+	padding-bottom: 2em; /* I learned on MDN this adds padding to just the bottom inside the element, which in this case is the hero header. */
 }
 
 h1 {
-    color: black;
-    font-size: 4rem;
-    line-height: 1;
+	font-family: "Libre Baskerville", serif;
+	color: black;
+	font-size: 3rem;
+	line-height: 1.2;
+	letter-spacing: -.05rem;
 }
 
-nav {
-    
+.no-break {
+	white-space: nowrap;
 }
 
-h2 {
-    font-size: 3rem;
+p {
+	font-family: "Libre Baskerville", serif;
+	letter-spacing: .01rem;
+	font-size: 1.1rem;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	line-height: 1.8;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.highlight {
+	background-color: crimson; 
+	color: white;
+}
+
+.highlight-ii {
+	background-color: maroon; 
+	color: white;
+}
+
+ul {
+	font-family: "Inter", sans-serif;
+}
+
+li {
+	border: .1em solid silver; /* I learned this is shorthand for border-width, border-style, and border-color on MDN. But is this still best practice when I want all four borders to be the same? */
+	padding: 1em; /* I learned on MDN this adds equal padding to all 4 sides inside the list item border, if not otherwise specified. */
+}
+/* When do I use rem vs. em? */
+
+article {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	border-bottom: .1em solid silver;
+}
+
+.article-header {
+	text-transform: uppercase;
+	font-family: "Rethink Sans", sans-serif;
+	font-weight: 800;
+	border-bottom: .1em solid silver;
+	padding-bottom: 2em;
 }
 
 h3 {
-    font-size: 2rem;
+	color: black;
+	font-size: 2rem;
+	letter-spacing: .05rem;
 }
 
-.michael-block {
-    font-family: "Nunito Sans", sans-serif;
-    font-style: italic;
-    color: darkgray;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 2;
+#title-michael {
+	background-color: crimson; 
+	color: white;
+	font-size: 5rem;
+	letter-spacing: .2rem;
 }
 
-#michael-section {
-    font-family: "Nunito Sans", sans-serif;
-    color: black;
-}
-
-#michael-rock {
-    font-family: "Climate Crisis", sans-serif;
-    font-size: 1rem;
+.author {
+	text-align: left;
 }
 
 #hooked {
-    font-family: "Climate Crisis", sans-serif;
-    text-align: left;
-    color: crimson;
+	text-align: left;
 }
 
 #on-a {
-    font-family: "Climate Crisis", sans-serif;
-    text-align: center;
-    color: crimson;
+	text-align: center;
 }
 
 #feeling {
-    font-family: "Climate Crisis", sans-serif;
-    text-align: right;
-    color: crimson;
+	text-align: right;
 }
 
-#michael-tldr {
-    font-family: "Climate Crisis", sans-serif;
-    text-align: center;
-    max-inline-size: 50ch; 
-    color: crimson;
-    letter-spacing: .1rem;
-    margin: 0 auto;
+.publication-date {
+	text-align: right;
 }
 
-#sooim-section {
-    font-family: "Rammetto One", sans-serif;
-    color: darkslateblue;
+#tldr-michael {
+	background-color: crimson; 
+	color: white;
+	font-family: "Rethink Sans", sans-serif;
+	text-align: left;
+	text-transform: uppercase;    
 }
 
-#sooim-section {
-    
+#tldr-title-michael {
+	letter-spacing: .1rem;
+	font-size: 3rem;
+	color: white;
+	font-weight: 800;
 }
 
-#fooled {
-    font-family: "Rammetto One", sans-serif;
-    text-align: left;
+#tldr-p-michael {
+	font-size: 2rem;
+	font-weight: 100;
+	letter-spacing: -.03rem;
+}
+
+#title-sooim {
+	background-color: maroon;
+	color: white;
+	font-size: 5rem;
+	letter-spacing: .2rem;
+}
+
+#fixed {
+	text-align: left;
 }
 
 #on-a-ii {
-    font-family: "Rammetto One", sans-serif;
-    text-align: center;
+	text-align: center;
 }
 
-#feeling-ii {
-    font-family: "Rammetto One", sans-serif;
-    text-align: right;
+#fact {
+	text-align: right;
 }
 
-#sooim-tldr {
-    text-align: center;
-    max-inline-size: 50ch; 
-    color: darkslateblue;
-    font-family: "Rammetto One", sans-serif;
-    letter-spacing: .1rem;
-    margin: 0 auto;
-    /* I looked up how to center block-level element on mdn  */
+#tldr-sooim {
+	background-color: maroon;
+	color: white;
+	font-family: "Rethink Sans", sans-serif;
+	text-align: left;
+	text-transform: uppercase;    
+}
+
+#tldr-title-sooim {
+	letter-spacing: .1rem;
+	font-size: 3rem;
+	color: white;
+	font-weight: 800;
+}
+
+#tldr-p-sooim {
+	font-size: 2rem;
+	font-weight: 100;
+	letter-spacing: -.03rem;
 }
 
 *:not(:first-child) { 
-    margin-block-start: 1em;
+	margin-block-start: 1em;
 }
