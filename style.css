@@ -32,12 +32,31 @@ p {
 	line-height: 1.8;
 }
 
-.italic {
-	font-style: italic;
+a[href^='https://']::after { 
+	content: ' ↗'; 
 }
 
-.underline {
+a[href^='https://']:link {
+	color: black;
 	text-decoration: underline;
+}
+
+a[href^='https://']:visited { 
+	color: purple; 
+}
+
+a[href^='https://']:hover { 
+	color: crimson;
+}
+
+a[href^='https://']:active { 
+	color: maroon;
+}
+
+/* I learned about these a: from the class Week 4 CSS page. */
+
+.italic {
+	font-style: italic;
 }
 
 .highlight {
@@ -59,6 +78,14 @@ li {
 	padding: 1em; /* I learned on MDN this adds equal padding to all 4 sides inside the list item border, if not otherwise specified. */
 }
 /* When do I use rem vs. em? */
+
+li:hover {
+	background-color: silver; 
+}
+
+li:active {
+	background-color: gray; 
+}
 
 article {
 	padding-top: 2em;
