@@ -1,34 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+@import url("https://use.typekit.net/nrx3trj.css");
 
 :root {
 	font-size: 110%;
 }
 
 body {
-	max-inline-size: 90ch;
+	max-inline-size: 80ch;
 	margin-inline: auto;
-	hyphens: none;
-	/* I learned this on MDN. */
-}
-
-header,
-section {
-	padding-block-end: 2rem;
+	hyphens: none; 	/* I learned this on MDN. */
+	margin-block: 4rem;
 }
 
 #hero {
 	border-block-end-color: rgb(209, 209, 214);
 	border-block-end-style:	solid;
-	border-block-end-width: .1rem;
-	padding-block-start: 5rem;
+	border-block-end-width: .08rem;
+	color: black;
+}
+
+#hero > a:first-of-type {
+	font-family: "franklin-gothic-atf", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: .8rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: .02em;
 }
 
 h1 {
 	font-family: "Libre Baskerville", serif;
-	color: black;
-	font-size: 3rem;
+	font-size: 2.5rem;
+	font-weight: 700;
+	font-style: normal;
 	line-height: 1.3em;
 	letter-spacing: -.03em;
+	margin-block: 1rem;
+}
+
+#hero p {
+	font-family: "Libre Baskerville", serif;	
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1rem;
+	line-height: 1.5em;
+	letter-spacing: 0rem;
 }
 
 .no-break {
@@ -37,33 +54,33 @@ h1 {
 
 p {
 	font-family: "Libre Baskerville", serif;
-	letter-spacing: .03em;
+	letter-spacing: .01em;
 	font-size: 1rem;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 	text-align: left;
 	line-height: 1.8em;
-	margin-block-start: 1em;
+	margin-block-end: 2rem;
 }
 
-a[href^='https://']::after { 
+section a[href^='https://']::after { 
 	content: ' ↗'; 
 }
 
-a[href^='https://']:link {
+section a[href^='https://']:link {
 	color: black;
 	text-decoration: underline;
 }
 
-a[href^='https://']:visited { 
+section a[href^='https://']:visited { 
 	color: purple; 
 }
 
-a[href^='https://']:hover { 
+section a[href^='https://']:hover { 
 	color: crimson;
 }
 
-a[href^='https://']:active { 
+section a[href^='https://']:active { 
 	color: maroon;
 }
 
@@ -79,76 +96,73 @@ em {
 }
 
 .highlight-ii {
-	background-color: maroon; 
+	background-color: rgb(220, 170, 20); 
 	color: white;
 }
 
 nav {
-	margin-block-start: 10rem;
-	margin-block-end: 1rem;
+	margin-block-start: 8rem;
+	margin-block-end: 2.5rem;
 }
 
-ul {
-	font-family: "Inter", sans-serif;
-	font-size: .8rem;
-
+#red-button:hover {
+	background-color: crimson;
+	color: white;
+	border-color: crimson;
 }
 
-li {
-	display: inline-block;
-	margin-inline-end: .5em;
+#red-button:active {
+	background-color: rgb(145, 14, 40);
+	color: white;
+	border-color: rgb(145, 14, 40);
 }
 
-li a {
-	padding: .8rem;
-	text-decoration: none;
-	border-color: rgb(209, 209, 214);
-	border-width: .1em;
-	border-style: solid;
-	border-radius: .8rem;
+#yellow-button:hover {
+	background-color: rgb(220, 170, 20);
+	color: white;
+	border-color: rgb(220, 170, 20);
 }
 
-li a:hover {
-	background-color: rgb(209, 209, 214); 
-}
-
-li a:active {
-	background-color: rgb(142, 142, 147); 
-	border-color: rgb(142, 142, 147);
+#yellow-button:active {
+	background-color: rgb(170, 132, 15);
+	color: white;
+	border-color: rgb(170, 132, 15);
 }
 
 article {
-	padding-top: 2em;
-	padding-bottom: 2em;
 	border-block-end-color: rgb(209, 209, 214);
 	border-block-end-style: solid;
-	border-block-end-width: .1rem;
+	border-block-end-width: .08rem;
+	padding-block: 3rem;
 }
 
 .article-header {
+	color: white;
 	text-transform: uppercase;
-	font-family: "Rethink Sans", sans-serif;
-	font-weight: 800;
 	border-block-end-color: rgb(209, 209, 214);
 	border-block-end-style: solid;
-	border-block-end-width: .1rem;
-	margin-block: 2em;
-	padding-block: 2em;
+	border-block-end-width: .08rem;
+	margin-block-end: 2rem;
+}
+
+.article-header h2, 
+.article-header p {
+	font-family: "Rethink Sans", sans-serif;
+	font-weight: 800;
+	letter-spacing: .05em;
 }
 
 .article-header h2 {
-	color: white;
-	font-size: 5rem;
-	letter-spacing: .05em;
-	line-height: 2em;
+	line-height: 1em;
+	font-size: 4rem;
 }
 
 .article-header p {
 	color: black;
 	font-size: 2rem;
-	letter-spacing: .05em;
 	font-family: "Rethink Sans", sans-serif;
 	font-weight: 800;
+	letter-spacing: .05em;
 }
 
 .author {
@@ -158,24 +172,22 @@ article {
 #hooked {
 	display: inline-block;
 	text-align: left;
+	padding: 1ch;
 	background-color: crimson; 
-	padding-inline: 2rem;
 }
 
 #on-a {
 	display: block;
 	text-align: center;
 	background-color: crimson; 
-	padding-inline: 1rem;
-	padding-block: .5rem;
+	padding: 1ch;
 }
 
 #feeling {
 	display: inline-block;
 	text-align: right;
 	background-color: crimson;
-	padding-inline: 1rem;
-	padding-block: .5rem;
+	padding: 1ch;
 }
 
 .publication-date {
@@ -187,44 +199,43 @@ article {
 	color: white;
 	font-family: "Rethink Sans", sans-serif;
 	text-align: left;
-	text-transform: uppercase;    
+	padding: 2rem;
+	margin-block-start: 5rem;
 }
 
 #tldr-title-michael {
 	letter-spacing: .1em;
-	font-size: 3rem;
+	font-size: 2rem;
 	color: white;
 	font-weight: 800;
+	text-transform: uppercase;
 }
 
 #tldr-p-michael {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 100;
 	letter-spacing: -.03em;
 }
 
 #fixed {
-	display: block;
+	display: inline-block;
 	text-align: left;
 	background-color: rgb(220, 170, 20); 
-	padding-inline: 1rem;
-	padding-block: .5rem;
+	padding: 1ch;
 }
 
 #on-a-ii {
 	display: block;
 	text-align: center;
 	background-color: rgb(220, 170, 20); 
-	padding-inline: 1rem;
-	padding-block: .5rem;
+	padding: 1ch;
 }
 
 #fact {
-	display: block;
+	display: inline-block;
 	text-align: right;
 	background-color: rgb(220, 170, 20); 
-	padding-inline: 1rem;
-	padding-block: .5rem;
+	padding: 1ch;
 }
 
 #tldr-sooim {
@@ -232,18 +243,50 @@ article {
 	color: white;
 	font-family: "Rethink Sans", sans-serif;
 	text-align: left;
-	text-transform: uppercase;    
+	padding: 2rem;
+	margin-block-start: 5rem;
 }
 
 #tldr-title-sooim {
 	letter-spacing: .1em;
-	font-size: 3rem;
+	font-size: 2rem;
 	color: white;
 	font-weight: 800;
+	text-transform: uppercase;
 }
 
 #tldr-p-sooim {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 100;
 	letter-spacing: -.03em;
+}
+
+footer {
+	margin-block-start: 2.5rem;
+}
+
+li {
+	display: inline-block;
+	margin-inline-end: .5rem;
+}
+
+li a {
+	font-family: "franklin-gothic-atf", sans-serif;
+	font-size: .8rem;
+	text-decoration: none;
+	border-color: rgb(209, 209, 214);
+	border-width: .08rem;
+	border-style: solid;
+	border-radius: .5rem;
+	text-align: center;
+	padding: 1ch;
+}
+
+li a:hover {
+	background-color: rgb(209, 209, 214); 
+}
+
+li a:active {
+	background-color: rgb(142, 142, 147); 
+	border-color: rgb(142, 142, 147);
 }
