@@ -52,7 +52,7 @@ h1 {
 	white-space: nowrap;
 }
 
-p {
+p:not(.author, .publication-date) {
 	font-family: "Libre Baskerville", serif;
 	letter-spacing: .01em;
 	font-size: 1rem;
@@ -133,61 +133,55 @@ article {
 	border-block-end-color: rgb(209, 209, 214);
 	border-block-end-style: solid;
 	border-block-end-width: .08rem;
-	padding-block: 3rem;
+	padding-block-end: 3rem;
 }
 
 .article-header {
-	color: white;
+	font-family: "Rethink Sans", sans-serif;
+	font-weight: 800;
+	letter-spacing: .05em;
 	text-transform: uppercase;
 	border-block-end-color: rgb(209, 209, 214);
 	border-block-end-style: solid;
 	border-block-end-width: .08rem;
+	padding-block: 3rem;
 	margin-block-end: 2rem;
-}
-
-.article-header h2, 
-.article-header p {
-	font-family: "Rethink Sans", sans-serif;
-	font-weight: 800;
-	letter-spacing: .05em;
-}
-
-.article-header h2 {
-	line-height: 1em;
-	font-size: 4rem;
-}
-
-.article-header p {
-	color: black;
-	font-size: 2rem;
-	font-family: "Rethink Sans", sans-serif;
-	font-weight: 800;
-	letter-spacing: .05em;
 }
 
 .author {
 	text-align: left;
 }
 
-#hooked {
-	display: inline-block;
-	text-align: left;
-	padding: 1ch;
-	background-color: crimson; 
+.article-header h2 {
+	color: white;
+	line-height: .8em;
+	font-size: 4rem;
 }
 
-#on-a {
+.article-header p {
+	color: black;
+	font-size: 2rem;
+}
+
+.label {
 	display: block;
-	text-align: center;
-	background-color: crimson; 
-	padding: 1ch;
+	width: fit-content;
+	padding-inline: 1ch;
+	padding-block: .8ch;
+	background-color: crimson;
+	margin-block: 0rem;
 }
 
-#feeling {
-	display: inline-block;
-	text-align: right;
-	background-color: crimson;
-	padding: 1ch;
+.left {
+	margin-inline: 0; 
+}
+
+.center {
+	margin-inline: auto; 
+}
+
+.right { 
+	margin-inline-start: auto; 
 }
 
 .publication-date {
@@ -199,43 +193,31 @@ article {
 	color: white;
 	font-family: "Rethink Sans", sans-serif;
 	text-align: left;
-	padding: 2rem;
+	padding: 2.5rem;
 	margin-block-start: 5rem;
 }
 
-#tldr-title-michael {
-	letter-spacing: .1em;
+h3 {
+	letter-spacing: 0.05em;
 	font-size: 2rem;
 	color: white;
 	font-weight: 800;
 	text-transform: uppercase;
 }
 
-#tldr-p-michael {
+blockquote {
 	font-size: 1.5rem;
 	font-weight: 100;
-	letter-spacing: -.03em;
+	padding-block-start: 2rem;
 }
 
-#fixed {
-	display: inline-block;
-	text-align: left;
-	background-color: rgb(220, 170, 20); 
-	padding: 1ch;
-}
-
-#on-a-ii {
+.label-ii {
 	display: block;
-	text-align: center;
-	background-color: rgb(220, 170, 20); 
-	padding: 1ch;
-}
-
-#fact {
-	display: inline-block;
-	text-align: right;
-	background-color: rgb(220, 170, 20); 
-	padding: 1ch;
+	width: fit-content;
+	padding-inline: 1ch;
+	padding-block: .8ch;
+	background-color: rgb(220, 170, 20);
+	margin-block: 0rem;
 }
 
 #tldr-sooim {
@@ -243,22 +225,8 @@ article {
 	color: white;
 	font-family: "Rethink Sans", sans-serif;
 	text-align: left;
-	padding: 2rem;
+	padding: 2.5rem;
 	margin-block-start: 5rem;
-}
-
-#tldr-title-sooim {
-	letter-spacing: .1em;
-	font-size: 2rem;
-	color: white;
-	font-weight: 800;
-	text-transform: uppercase;
-}
-
-#tldr-p-sooim {
-	font-size: 1.5rem;
-	font-weight: 100;
-	letter-spacing: -.03em;
 }
 
 footer {
