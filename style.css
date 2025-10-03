@@ -1,74 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
-@import url("https://use.typekit.net/nrx3trj.css");
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
+/* ---------------- General ---------------- */
 :root {
-	font-size: 110%;
-}
-
-#logo {
-	border-block-end-color: rgb(209, 209, 214);
-	border-block-end-style:	solid;
-	border-block-end-width: .08rem;
-	color: black;
-	inline-size: 100vw;
-	margin-inline: calc(50% - 50vw); /* I learned this off our class site under Box Model unit. */
-	text-align: center;
-	font-family: "carol-gothic", serif;
-	font-size: 2rem;
-	padding-block: .5rem;
+	font-size: 115%;
 }
 
 body {
-	max-inline-size: 80ch;
-	margin-inline: auto;
-	hyphens: none; 	/* I learned this on MDN. */
+	hyphens: none;
 	margin-block-end: 5rem;
 }
 
-#hero {
-	border-block-end-color: rgb(209, 209, 214);
-	border-block-end-style:	solid;
-	border-block-end-width: .08rem;
-	color: black;
-	margin-block-start: 3rem;
+main {
+	max-inline-size: 80ch;
+	margin-inline: auto;
 }
-
-#hero > a:first-of-type {
-	font-family: "franklin-gothic-atf", sans-serif;
-	font-weight: 600;
-	font-style: normal;
-	font-size: .8rem;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: .02em;
-}
-
-h1 {
-	font-family: "Libre Baskerville", serif;
-	font-size: 2.5rem;
-	font-weight: 700;
-	font-style: normal;
-	line-height: 1.3em;
-	letter-spacing: -.03em;
-	margin-block: 1rem;
-}
-
-#hero p {
-	font-family: "Libre Baskerville", serif;	
-	font-weight: 400;
-	font-style: normal;
-	font-size: 1rem;
-	line-height: 1.5em;}
 
 .no-break {
 	white-space: nowrap;
 }
 
-#intro {
-	margin-block-start: 2rem;
+em {
+	font-style: italic;
 }
 
-p:not(.author, .publication-date, #sk-review) {
+p:not(.author, .brand, .byline) {
 	font-family: "Libre Baskerville", serif;
 	letter-spacing: .01em;
 	font-size: 1rem;
@@ -79,258 +34,532 @@ p:not(.author, .publication-date, #sk-review) {
 	margin-block-end: 2rem;
 }
 
-#intro > #front-page {
-	display: block;
+/* ---------------- Header Logo ---------------- */
+#logo {
+	border-block-end-color: rgb(209, 209, 214);
+	border-block-end-style: solid;
+	border-block-end-width: .08rem;
+	inline-size: 100vw;
+	margin-inline: calc(50% - 50vw);
 	text-align: center;
-	font-family: "Libre Baskerville", serif;
-	font-weight: 700;
-	letter-spacing: 0em;
-	font-size: 1.5rem;
-	margin-block: 0;
-}
-
-#intro details {
-	font-family: "Libre Baskerville", serif;
-	font-weight: 700;
-	letter-spacing: .01em;
-	margin-block-end: 2rem;
-	margin-block-start: .5rem;
-	padding: 1rem;
-	border-color: rgb(209, 209, 214);
-	border-style: solid;
-	border-width: .1rem;
-	border-radius: .25rem;
-	display: inline-block;
-	vertical-align: top;
-	inline-size: calc(50% - .5rem);
-	box-sizing: border-box;
+	padding-block: .15rem;
+	white-space: nowrap;
+	position: relative;
 	background-color: white;
 	color: black;
 }
 
-#intro details#fifteen:hover {
-	background-color: rgb(107, 170, 100);
-	border-color: rgb(107, 170, 100);
-	color: white;
-}
-
-#intro details#twenty-five:hover {
-	background-color: rgb(189, 112, 196);
-	border-color: rgb(189, 112, 196);
-	color: white;
-}
-
-#intro details#fifteen[open],
-#intro details#twenty-five[open] {
-	background-color: white;
-	color: black;
-}
-
-#intro details > summary {
-	cursor: pointer;
+#sk-review,
+footer .brand {
+	font-family: "Jacquard 24", serif;
+	font-size: 2rem;
 	font-weight: 700;
-	font-size: 1rem;
-	list-style: none;
-}
-
-#intro details > summary::before {
-	content: "▸";
-	margin-inline-end: .5rem;
 	display: inline-block;
-}
-
-#intro details[open] > summary::before { 
-	transform: rotate(90deg); 
-	margin-block-end: 2rem;
-	/* I learned this on MDN and above on how to insert the play character and override the resets.  */
-}
-
-#intro details > a,
-#intro details > p {
-	display: block;
+	vertical-align: middle;
 	margin: 0;
 }
 
-#intro details p {
+#t-and-i {
+	font-family: "Rethink Sans", sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
 	font-size: .8rem;
-	font-weight: 400;
-	color: rgb(128, 129, 127);
-	line-height: 1.5em;
-	margin-block-start: 1rem;
-	padding-block-end: 2rem;
-	border-block-end-color: rgb(209, 209, 214);
-	border-block-end-style: solid;
-	border-block-end-width: .1rem;
-}
-
-#intro details p:last-of-type {
-	border-block-end: none;
-	padding-block-end: 0;
-}
-
-#intro details p + a {
-	margin-block-start: 1rem;
-}
-
-#intro details a:any-link { 
-	text-decoration: underline; 
-}
-
-#intro details a:hover { 
-	text-decoration: none; 
-}
-
-#intro details a:active { 
-	color: black; 
-}
-
-#green a[href^='https://']::after,
-#intro:not(details) a[href^='https://']::after { 
-	content: ' ↗'; 
-}
-
-#intro:not(details) a[href^='https://']:any-link {
-	color: rgb(50, 104, 144);
-	text-decoration: underline;
-}
-
-#intro:not(details) a[href^='https://']:hover { 
-	color: rgb(50, 104, 144);
+	letter-spacing: .06em;
 	text-decoration: none;
+	color: white;
+	background-color: rgb(86, 123, 148);
+	border-style: solid;
+	border-width: .08rem;
+	border-color: rgb(50, 104, 144);
+	border-radius: .2rem;
+	padding: 1ch;
+	position: absolute;
+	inset-block-start: 50%; 
+	/* I learned how to position this vertically in relation to its relative parent of logo in this instance. */
+	inset-inline-end: 1rem;
+	transform: translateY(-50%);
+	/* I learned on MDN how to vertically align to parent, so it wouldn't sit outside of border. */
 }
 
-#intro:not(details) a[href^='https://']:active { 
-	color: rgb(29, 64, 89);
-}
-
-#green a[href^='https://']:any-link {
-	color: rgb(107, 170, 100);
-	text-decoration: underline;
-}
-
-#green a[href^='https://']:hover { 
-	color: rgb(107, 170, 100);
-	text-decoration: none;
-}
-
-#green a[href^='https://']:active { 
-	color: rgb(82, 131, 77);
-}
-
-em {
-	font-style: italic;
-}
-
-.highlight {
-	background-color: rgb(107, 170, 100); 
+#t-and-i:hover {
+	background-color: rgb(50, 104, 144);
 	color: white;
 }
 
-.highlight-ii {
-	background-color: rgb(189, 112, 196); 
+/* ---------------- Hero + Article Header ---------------- */
+#hero,
+.article-header {
 	color: white;
+	padding-inline: 3rem;
+	padding-block-start: 20rem;
+	position: relative;
+	inline-size: 100vw;
+	margin-inline: calc(50% - 50vw);
 }
 
-nav {
-	margin-block-start: 10rem;
-	margin-block-end: 2.5rem;
+#hero {
+	background-image: linear-gradient(to bottom, white 0%, black 80%); 
+	/* I learned this on MDN! */
+	background-color: rgb(0,0,0);
+	text-align: center;
+	margin-block-end: 0rem;
+	padding-block-end: 0rem;
 }
 
-#green-button:hover {
-	background-color: rgb(107, 170, 100);
-	color: white;
-	border-color: rgb(107, 170, 100);
-}
-
-#green-button:active {
-	background-color: rgb(82, 131, 77);
-	color: white;
-	border-color: rgb(82, 131, 77);
-}
-
-#purple-button:hover {
-	background-color: rgb(189, 112, 196);
-	color: white;
-	border-color: rgb(189, 112, 196);
-}
-
-#purple-button:active {
-	background-color: rgb(142, 83, 147);
-	color: white;
-	border-color: rgb(142, 83, 147);
-}
-
-article {
+.article-header {
+	margin-block-end: 3rem;
 	border-block-end-color: rgb(209, 209, 214);
-	border-block-end-style: solid;
+	border-block-end-style:	solid;
 	border-block-end-width: .08rem;
 	padding-block-end: 3rem;
 }
 
-article:nth-child(2) {
-	margin-block-end: 1rem;
+#michael.article-header {
+	background-image: linear-gradient(to bottom, white 0%, rgb(107,170,100) 80%);
+	background-color: rgb(107,170,100);
 }
 
-.article-header {
+#sooim.article-header {
+	background-image: linear-gradient(to bottom, white 0%, rgb(189,112,196) 80%);
+	background-color: rgb(189,112,196);
+}
+
+.kicker, 
+.author {
 	font-family: "Rethink Sans", sans-serif;
 	font-weight: 800;
-	letter-spacing: .05em;
+	font-style: normal;
+	font-size: 1rem;
 	text-transform: uppercase;
-	border-block-end-color: rgb(209, 209, 214);
-	border-block-end-style: solid;
-	border-block-end-width: .08rem;
-	padding-block: 3rem;
-	margin-block-end: 2rem;
+	letter-spacing: .08em;
+	color: white;
+	text-decoration: none;
 }
 
-.author {
+#hero .kicker {
+	display: block;
+	text-align: center;
+	margin-inline: auto;
+}
+
+h1,
+.article-header h2 {
+	font-family: "Roboto Serif", serif;
+	font-size: 3rem;
+	font-weight: 800;
+	font-style: normal;
+	line-height: 1em;
+	letter-spacing: 0.04em;
+	margin-block-start: 2.5rem;
+	margin-block-end: 3.5rem;
+	transform: scaleY(1.6); /* I couldn't get the font I wanted for free, so I found a way to stretch Roboto Serif taller to mimic the font I wanted.  */
+	max-inline-size: 28ch;
+	text-align: center;
+}
+
+.byline {
+	font-family: "Rethink Sans", sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 1.3em;
+	max-inline-size: 55ch;
+	vertical-align: bottom;
 	text-align: left;
 }
 
-.article-header h2 {
-	color: white;
-	line-height: .8em;
-	font-size: 4rem;
-}
-
-.article-header p {
-	color: black;
-	font-size: 2rem;
-	margin-block: 1rem;
-}
-
-.label {
+#hero h1,
+#hero .byline {
+	margin-inline: auto;
+	text-align: center;
 	display: block;
-	width: fit-content; /* I learned this on MDN so the highlight color stretches only across the word's element container. */
-	padding-inline: 1ch;
-	padding-block: .8ch;
-	background-color: rgb(107, 170, 100);
 }
 
-.left {
-	margin-inline: 0; 
+/* ---------------- Sticky Nav ---------------- */
+#buttons {
+	position: sticky;
+	inset-block-start: 0;
+	z-index: 1000;
+	background-color: black;
+	inline-size: 100vw;
+	margin-inline: calc(50% - 50vw);
+	padding-block: 2rem;
+	text-align: center;
 }
 
-.center {
-	margin-inline: auto; 
+#buttons ul {
+	list-style: none;
+	display: inline-block;
+	margin:0; 
+	padding:0; }
+
+#buttons li {
+	display: inline-block;
+	margin-inline: .3rem;
 }
 
-.right { 
-	margin-inline-start: auto; 
+#buttons a {
+	font-family: "Rethink Sans", sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: .03em;
+	text-decoration: none;
+	border-width: .08rem;
+	border-style: solid;
+	border-radius: .5rem;
+	padding: 1ch;
+	color: black;
 }
 
-.publication-date {
+#buttons li:first-child a,
+#buttons li:nth-child(2) a {
+	background-color: rgb(107,170,100);
+	color: white;
+	border-color: rgb(107,170,100);
+}
+
+#buttons li:last-child a,
+#buttons li:nth-child(3) a {
+	background-color: rgb(189,112,196);
+	color: white;
+	border-color: rgb(189,112,196);
+}
+
+#buttons li:nth-child(2) a, 
+#buttons li:last-child a {
+	border-color: white;
+}
+
+#buttons li:first-child a:hover,
+#buttons li:nth-child(2) a:hover { 
+	background-color: rgb(82,131,77); 
+	border-color: rgb(82,131,77); 
+	color: white; 
+}
+
+#buttons li:last-child a:hover,
+#buttons li:nth-child(3) a:hover  { 
+	background-color: rgb(142,83,147); 
+	border-color: rgb(142,83,147); 
+	color: white; 
+}
+
+.article-header a {
+	font-family: "Rethink Sans", sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: .02em;
+	text-decoration: none;
+	border-style: solid;
+	border-width: .08rem;
+	border-radius: .5rem;
+	padding: 1ch;
+	text-align: center;
+}
+
+
+/* ---------------- Hooked on a Feeling Article Header ---------------- */
+#michael.article-header, 
+#michael h2,
+#michael .byline { 
+	text-align: left;
+}
+
+#michael h2, 
+#michael .byline {
+	margin-inline-end: auto;
+}
+
+#michael .byline {
+	display: inline-block;
+	max-inline-size: 45ch;
+}
+
+#michael > a {
+	background-color: rgb(107,170,100);
+	border-color: white;
+	color: white;
+	text-transform: uppercase;
+	position: absolute;
+	inset-inline-end: 3rem;
+	inset-block-end: 3rem;
+}
+
+#michael a:hover {
+	background-color: rgb(82,131,77); 
+	border-color: rgb(82,131,77);
+}
+
+/* ---------------- Fixed on a Fact Article Header ---------------- */
+#sooim.article-header, 
+#sooim h2, 
+#sooim .byline { 
 	text-align: right;
 }
 
-#tldr-michael {
-	background-color: rgb(107, 170, 100); 
+#sooim h2 { 
+	margin-inline-start: auto;
+}
+
+#sooim .byline { 
+	display: inline-block;
+	max-inline-size: 52ch;
+}
+
+#sooim > a {
+	position: absolute;
+	inset-inline-start: 3rem;
+	inset-block-end: 3rem;
+	background-color: rgb(189,112,196);
+	border-color: white;
 	color: white;
+	text-transform: uppercase;
+}
+
+#sooim a:hover {
+	background-color: rgb(142,83,147); 
+	border-color: rgb(142,83,147);
+}
+
+/* ---------------- Read Rock ---------------- */
+#read-rock {
+	border-block-width: .1rem;
+	border-block-style: solid;
+	border-block-color: rgb(209,209,214);
+	font-weight: 800;
+	letter-spacing: .07em;
 	font-family: "Rethink Sans", sans-serif;
-	text-align: left;
-	padding: 2.5rem;
-	margin-block-start: 5rem;
-	scroll-margin-block-start: 3rem; /* Saw this on your slack comment */
+	font-size: 1rem;
+	padding-block: 2rem;
+	text-align: center;
+	margin-block: 4rem;
+}
+
+#read-rock a:hover {
+	color: rgb(114, 114, 114);
+}
+
+#read-rock a::after {
+	content: ' ↗'; 
+}
+
+/* ---------------- Details ---------------- */
+#intro { 
+	margin-block-start: 2rem; 
+	position: relative; 
+}
+
+details { 
+	display: block; 
+	inline-size: 20ch; 
+	box-sizing: border-box; 
+	background-color: white; 
+	color: black; 
+	position: static; 
+	float: inline-start;
+}
+
+#fifteen { 
+	float: inline-start;
+	margin-inline-start: -28ch; 
+	margin-inline-end: 2ch;
+}
+
+#twenty-five { 
+	float: inline-end;
+	margin-inline-start: 2ch; 
+	margin-inline-end: -28ch;
+}
+
+#intro::after { 
+	content: ""; 
+	/* I basically understood this as ensuring my floating details elements don't mess up the alignment after #intro. */
+	display: block; 
+	clear: both; 
+}
+
+details > summary {
+	cursor: pointer;
+	font-weight: 800;
+	font-size: .8rem;
+	list-style: none;
+	font-family: "Rethink Sans", sans-serif;
+	letter-spacing: .05em;
+	border-block-end-width: .1rem;
+	border-block-end-style: solid;
+	border-block-end-color: rgb(209,209,214);
+	position: relative;
+	padding: 1ch;
+	background-color: white;
+}
+
+#fifteen > summary::after {
+  content: "▸";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 1ch;
+  transform: translateY(-50%);
+}
+
+#fifteen[open] > summary::after {
+  content: "▾";
+}
+
+#twenty-five > summary {
+  text-align: right;
+  padding-inline-start: 2ch;
+  position: relative;
+}
+
+#twenty-five > summary::before {
+  content: "◂";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 1ch;
+  transform: translateY(-50%);
+}
+
+#twenty-five[open] > summary::before {
+  content: "▾";
+}
+
+details a {
+	font-size: .7rem; 
+	font-family: "Libre Baskerville", serif; 
+	letter-spacing: .01em;
+	font-weight: 400; 
+	color: black; 
+	line-height: 1.5em; 
+	padding-block: 1rem;
+	border-block-end-width: .1rem; 
+	border-block-end-style: solid;
+	border-block-end-color: rgb(209,209,214); 
+	display: block;
+}
+
+#fifteen > summary:hover,
+#fifteen[open] > summary {
+	background-color: rgb(107, 170, 100);
+	color: white;
+}
+
+#twenty-five > summary:hover,
+#twenty-five[open] > summary {
+	background-color: rgb(189, 112, 196);
+	color: white;
+}
+
+#fifteen a:hover {
+	color: rgb(107, 170, 100);
+	text-decoration: none;
+}
+
+#twenty-five a:hover {
+	color: rgb(189, 112, 196);
+	text-decoration: none;
+}
+
+/* ---------------- Highlights ---------------- */
+.michael-highlight {
+	background-color: rgb(107, 170, 100);
+	color: white;
+}
+
+.sooim-highlight {
+	background-color: rgb(189, 112, 196);
+	color: white;
+}
+
+/* ---------------- Hyperlinks ---------------- */
+#intro p a::after {
+	content: ' ↗'; 
+}
+
+#intro p a {
+	color: rgb(50, 104, 144);
+	text-decoration: underline;
+}
+
+#intro p a:hover {
+	color: rgb(50, 104, 144);
+	text-decoration: none;
+}
+
+#intro p a:active {
+	color: rgb(29, 64, 89);
+	text-decoration: none;
+}
+
+#michael-body a::after {
+	content: ' ↗'; 
+}
+
+#michael-body a {
+	color: rgb(107, 170, 100);
+	text-decoration: underline;
+}
+
+#michael-body a:hover {
+	color: rgb(107, 170, 100);
+	text-decoration: none;
+}
+
+#michael-body a:active {
+	color: rgb(82, 131, 77);
+	text-decoration: none;
+}
+
+/* ---------------- Article ---------------- */
+article:last-of-type {
+	border-block-end-width: 0;
+	border-block-end-style: none;
+	border-block-end-color: transparent;
+}
+
+/* ---------------- Pull Quotes ---------------- */
+blockquote {
+	font-weight: 800;
+	letter-spacing: .02em;
+	font-family: "Rethink Sans", sans-serif;
+	text-align: center;
+	font-size: 2rem;
+	line-height: 1.2em;
+	margin-block: 4rem;
+	padding-block: 2rem;
+}
+
+#michael-body blockquote {
+	border-block-width: .1rem;
+	border-block-style: solid;
+	border-block-color: rgb(107,170,100);
+	color: rgb(107,170,100);
+}
+
+#sooim-body blockquote {
+	border-block-width: .1rem;
+	border-block-style: solid;
+	border-block-color: rgb(189,112,196);
+	color: rgb(189,112,196);
+}
+
+/* -------- TLDR sections -------- */
+.tldr-section { 
+	color: white; 
+	font-family: "Rethink Sans", sans-serif; 
+	text-align: center; 
+	padding: 2.5rem; 
+	margin-block-start: 4rem; 
+	margin-block-end: 6rem;
+	scroll-margin-block-start: 3rem; 
+}
+
+#tldr-michael {
+	background-color: rgb(107,170,100); 
+	scroll-margin-block-start: 10rem;
+}
+
+#tldr-sooim { 
+	background-color: rgb(189,112,196); 
+	scroll-margin-block-start: 10rem;
 }
 
 h3 {
@@ -339,58 +568,133 @@ h3 {
 	color: white;
 	font-weight: 800;
 	text-transform: uppercase;
+	margin-block-end: 1rem;
 }
 
-blockquote {
+.tldr-section blockquote {
+	letter-spacing: .04em;
 	font-size: 1.5rem;
-	font-weight: 100;
-	padding-block-start: 2rem;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
 }
 
-.label-ii {
-	display: block;
-	width: fit-content;
-	padding-inline: 1ch;
-	padding-block: .8ch;
-	background-color: rgb(189, 112, 196);
+/* ---------------- Rock articles ---------------- */
+section:has(#rock-articles) {
+	inline-size: 100vw;
+	margin-inline: calc(50% - 50vw);
+	padding-inline-start: max(0vw, calc(50vw - 65ch));
+	padding-inline-end: max(0vw, calc(50vw - 65ch));
+	border-block-width: .08rem;
+	border-block-style: solid;
+	border-block-color: rgb(209,209,214);
+	padding-block: 1rem;
 }
 
-#tldr-sooim {
-	background-color: rgb(189, 112, 196);
-	color: white;
+#more-written {
 	font-family: "Rethink Sans", sans-serif;
-	text-align: left;
-	padding: 2.5rem;
-	margin-block-start: 5rem;	
-	scroll-margin-block-start: 3rem;
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: 800;
 }
 
+#rock-articles {
+	list-style: none; 
+	margin-inline-start: calc(50% - 50vw);
+	margin-inline-end: calc(50% - 50vw);
+	inline-size: 100vw;
+	box-sizing: border-box;
+	padding-inline-start: max(0vw, calc(50vw - 70ch));
+	padding-inline-end: max(0vw, calc(50vw - 70ch));
+	display: flex; 
+	/* I tried to avoid using flex/grid as much as I could for this assignment, but I couldn't figure out a way to get the borders to be the same length without using it, and it was driving me absolutely nuts looking at it uneven.  */
+}
+
+#rock-articles::after { 
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+
+#rock-articles > li {
+	width: 33.3333%; 
+	box-sizing: border-box;
+	padding-inline: 1.5rem; 
+	border-inline-end-width: .08rem;
+	border-inline-end-style: solid;
+	border-inline-end-color: rgb(209,209,214);
+	background-color: white; 
+	flex: 1;
+}
+
+#rock-articles > li:nth-child(3n) { 
+	border: none; 
+	padding-inline-end: 0; 
+}
+
+#rock-articles > li > p:first-of-type {
+	font-family: "Rethink Sans", sans-serif; 
+	font-weight: 800; 
+	letter-spacing: .03em; 
+	text-transform: uppercase; 
+	font-size: .8rem; 
+	color: rgb(114,114,114);
+	margin-block-end: 2rem;
+}
+
+#rock-articles > li > a {
+	display: block; 
+	text-decoration: none; 
+	color: black; 
+	font-weight: 800; 
+	line-height: 1em; 
+	font-size: 1.8rem; 
+	margin-block-end: 2.5rem;
+	text-align: left; 
+	font-family: "Roboto Serif", serif; 
+	letter-spacing: .02em; 
+	transform: scaleY(1.6);
+}
+
+#rock-articles > li > a:hover { 
+	text-decoration: underline; 
+}
+
+#rock-articles > li > p:last-of-type {  
+	font-family: "Rethink Sans", sans-serif; 
+	font-size: .9rem; 
+	line-height: 1.4em; 
+	color: black; 
+}
+
+/* -------- Footer -------- */
 footer {
-	margin-block-start: 2.5rem;
+	position: relative;
+	border-block-start-width: .08rem;
+	border-block-start-style: solid;
+	border-block-start-color: rgb(209,209,214);
+	padding-block: 2rem;
+	max-inline-size: 130ch;
+	margin-inline: auto;
 }
 
-li {
-	display: inline-block;
-	margin-inline-end: .5rem;
-}
-
-li a {
-	font-family: "franklin-gothic-atf", sans-serif;
-	font-size: .8rem;
+footer a {
+	font-family: "Rethink Sans", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: .02em;
 	text-decoration: none;
-	border-color: rgb(209, 209, 214);
 	border-width: .08rem;
 	border-style: solid;
+	border-color: rgb(209,209,214);
 	border-radius: .5rem;
-	text-align: center;
 	padding: 1ch;
+	position: absolute;
+	inset-inline-end: 0;
+	inset-block-start: 50%;
+	transform: translateY(-50%);
 }
 
-li a:hover {
-	background-color: rgb(209, 209, 214); 
-}
-
-li a:active {
-	background-color: rgb(142, 142, 147); 
-	border-color: rgb(142, 142, 147);
+footer a:hover {
+	background-color: rgb(209,209,214);
 }
